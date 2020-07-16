@@ -26,16 +26,6 @@ h2 {
   text-align: center
 }
 
-h2.greek {
-  color: rgb(54, 85, 100);
-  font-family: fantasy
-}
-
-h2.rome {
-  color: rgb(94, 47, 47);
-  font-family: cursive
-}
-
 p {
   color: rgb(255, 93, 93);
   text-align: center;
