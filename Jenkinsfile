@@ -18,7 +18,7 @@ pipeline {
      steps {
        echo 'Deploying...'
        sshagent(credentials : ['sshjenkins']) {
-           sh 'ssh -o StrictHostKeyChecking=no AzureUser@52.186.170.102 uptime'
+           sh 'ssh -i ~/.ssh/trent-vm_key.pem -o StrictHostKeyChecking=no AzureUser@52.186.170.102'
            sh 'docker ps'
        }
      }
