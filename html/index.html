@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jenkins/Docker CI/CD</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            var ref;
+            function checkRefresh(){
+                if (document.cookie == "refresh=1") {
+                    document.getElementById("check").checked = true;
+                    ref = setTimeout(function(){location.reload();}, 1000);
+                } else {
+                }
+            }
+            function changeCookie() {
+                if (document.getElementById("check").checked) {
+                    document.cookie = "refresh=1";
+                    ref = setTimeout(function(){location.reload();}, 1000);
+                } else {
+                    document.cookie = "refresh=0";
+                    clearTimeout(ref);
+                }
+            }
+        </script>
+    </head>
+    <body onload="checkRefresh();">
+        <div>
+            <h1 id="name"> Trent Avent Resume Test</h1>
+            <p> Configured via Docker and Jenkins </p>
+        </div>
+        <div>
+            <h2>Education:</h2>
+            <p>B.S. in Statistical Analytics and Computer Science</p>
+            <p>From the University of North Carolina at Chapel Hill</p>
+        </div>
+        <div>
+            <h2>Relevant coursework:</h2>
+            <p> Computer Science: Machine Learning, Algorithms, Data Structures, Object Oriented Programming, Web Programming</p>
+            <p> Statistics: Machine Learning, Probability, Stochiastic Systems, Analysis of Simulations</p>
+        </div>
+        <div>
+            <h2>Programming Languages:</h2>
+            <p>Java, Python, JavaScript, R, SQL</p>
+        </div>
+        <div>
+            <a href="projects.html"> Projects </a>
+        </div>>
+        <div class="check"><input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh</div>
+    </body>
+</html>
