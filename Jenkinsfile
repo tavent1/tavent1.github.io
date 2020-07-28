@@ -19,7 +19,7 @@ pipeline {
        echo 'Deploying...'
        sshagent(credentials : ['sshjenkins']) {
            sh 'pwd'
-           sh 'sudo ssh AzureUser@52.186.170.102'
+           sh 'ssh -v AzureUser@52.186.170.102'
            sh 'docker ps'
        }
      }
