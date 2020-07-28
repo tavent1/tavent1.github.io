@@ -20,7 +20,7 @@ pipeline {
        sshagent(credentials : ['sshjenkins']) {
            sh 'pwd'
            sh '''
-           ssh AzureUser@52.186.170.102 docker ps
+           ssh AzureUser@52.186.170.102 ./hello.sh
            '''
        }
      }
