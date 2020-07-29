@@ -1,6 +1,6 @@
-FROM nginx:mainline-alpine
+FROM nginx
 
 RUN rm /etc/nginx/conf.d/*
-COPY html /usr/share/nginx/html
+COPY . /usr/share/nginx/html
 ADD hello.conf /etc/nginx/conf.d/
 EXPOSE 80
